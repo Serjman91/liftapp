@@ -1,0 +1,33 @@
+.header {
+  a {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: .3s;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.main-content {
+  background-blend-mode: multiply;
+  background: rgba(0,0,255,0.1) url("../img/main-bg.jpg") no-repeat;
+  background-size: cover;
+  filter: grayscale(0%);
+
+}
+
+.tabs {
+  width: 100%;
+
+  .nav-link {
+    color: $c-tabs-text;
+  }
+}
+
+.table {
+  background: $c-table-bg;
+  color: $c-tabs-text;
+}
