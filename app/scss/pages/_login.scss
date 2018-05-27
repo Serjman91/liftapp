@@ -1,6 +1,7 @@
 .header {
   background-color: $c-login-bg;
   color: #fff;
+  padding: 15px;
 
   a {
     color: $c-login-text;
@@ -12,11 +13,14 @@
   }
 }
 
+.login-content {
+  filter: grayscale(90%);
+}
+
 .login-content,
 .main-content {
-  background: url("../img/login-bg.jpg") no-repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.2)100%), url("../img/login-bg.jpg") no-repeat;
   background-size: cover;
-  filter: grayscale(90%);
 
   .row {
     justify-content: center;

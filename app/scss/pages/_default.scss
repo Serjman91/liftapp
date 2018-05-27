@@ -9,16 +9,45 @@ body {
   flex-direction: column;
   min-height: 100%;
   margin: 0;
+  min-width: 320px;
 }
 
 .content {
   flex-grow: 1;
 }
 
+.scroll-table {
+  overflow-y: auto;
+}
+
 .footer {
   background-color: $c-footer-bg;
   color: $c-footer-text;
-  padding: 15px 0;
+  padding: 15px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  .footer-logo {
+    padding-right: 15px;
+  }
+
+  .footer-logo,
+  .footer-info {
+    @media (max-width: 768px) {
+      padding-bottom: 10px;
+    }
+  }
+
+  img {
+    max-width: 64px;
+    padding-right: 10px;
+  }
 }
 
 ul {
@@ -42,7 +71,6 @@ input, select, option, textarea {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 15px 0;
   width: 100%;
 
   a {

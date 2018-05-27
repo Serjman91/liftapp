@@ -1,0 +1,169 @@
+{% extends '../layouts/layout.base.twig' %}
+
+{% block title %}Журнал заявок{% endblock %}
+
+{% block header %}
+    {% include '../includes/header.twig' %}
+{% endblock %}
+
+{% block content %}
+    <div class="content request-content">
+        <div class="container">
+            <div class="row">
+                <div class="drop-container">
+                    <p>
+                        <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Поиск по базе
+                        </button>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                            <form class="drop-form">
+
+                                <div class="form-group">
+                                    <select class="form-control" size="1" name="date">
+                                        <option value="month">Месяц</option>
+                                        <option value="week">Неделя</option>
+                                        <option value="year">Год</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control form-control-sm" size="1" name="address" required="">
+                                        <option value="" selected="" disabled="">Адрес дома:</option>
+                                        <option value="Оптиков 45 к1">Оптиков 45 к1</option>
+                                        <option value="Оптиков 45 к2">Оптиков 45 к2</option>
+                                        <option value="Оптиков 49">Оптиков 49</option>
+                                        <option value="Оптиков 50">Оптиков 50</option>
+                                        <option value="Оптиков 52">Оптиков 52</option>
+                                        <option value="Туристская 11">Туристская 11</option>
+                                        <option value="Туристская 15">Туристская 15</option>
+                                        <option value="Туристская 18">Туристская 18</option>
+                                        <option value="Туристская 28">Туристская 28</option>
+                                        <option value="Лыжная 3">Лыжная 3</option>
+                                        <option value="Лыжная 4">Лыжная 4</option>
+                                        <option value="Лыжная 10">Лыжная 10</option>
+                                        <option value="Мебельная 19">Мебельная 19</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" size="1" name="front">
+                                        <option selected="" disabled=""> № парадной:</option>
+                                        <option value="1">1 парадная</option>
+                                        <option value="2">2 парадная</option>
+                                        <option value="3">3 парадная</option>
+                                        <option value="4">4 парадная</option>
+                                        <option value="5">5 парадная</option>
+                                        <option value="6">6 парадная</option>
+                                        <option value="7">7 парадная</option>
+                                        <option value="8">8 парадная</option>
+                                        <option value="9">9 парадная</option>
+                                        <option value="10">10 парадная</option>
+                                        <option value="11">11 парадная</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" size="1" name="typeOfLift">
+                                        <option selected="" disabled="">Тип лифта:</option>
+                                        <option value="Пасс.">Пассажирский</option>
+                                        <option value="Груз.">Грузовой</option>
+                                        <option value="Пож.">Пожарный</option>
+                                        <option value="Лев_груз.">Левый грузовой</option>
+                                        <option value="Прав_груз.">Правый грузовой</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn color_but_blue" type="submit">
+                                        Поиск
+                                    </button>
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="accordion" class="database-accordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <div class="btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <span class="date">24.05.2018</span>	<span class="address">Мебельная 19-5-пасс.</span>
+                                </div>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="number">
+                                    <h5>Ошибка</h5>
+                                    <p>404</p>
+                                </div>
+                                <div class="notice">
+                                    <h5>Заметка</h5>
+                                    <p>Не найдено заметок</p>
+                                </div>
+                                <div class="work">
+                                    <h5>Работа</h5>
+                                    <p>Нет хаметок - нет работы</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <div class="btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <span class="date">25.05.2018</span>	<span class="address">Оптиков 45 к1-11-вся парадная</span>
+                                </div>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="number">
+                                    <h5>Ошибка</h5>
+                                    <p>404</p>
+                                </div>
+                                <div class="notice">
+                                    <h5>Заметка</h5>
+                                    <p>Не найдено заметок</p>
+                                </div>
+                                <div class="work">
+                                    <h5>Работа</h5>
+                                    <p>Нет хаметок - нет работы</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <div class="btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <span class="date">24.05.2018</span>	<span class="address">Туристская 18-1-прав_груз</span>
+                                </div>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="number">
+                                    <h5>Ошибка</h5>
+                                    <p>404</p>
+                                </div>
+                                <div class="notice">
+                                    <h5>Заметка</h5>
+                                    <p>Не найдено заметок</p>
+                                </div>
+                                <div class="work">
+                                    <h5>Работа</h5>
+                                    <p>Нет хаметок - нет работы</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

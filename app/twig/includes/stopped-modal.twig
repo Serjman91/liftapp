@@ -1,0 +1,39 @@
+<div class="modal fade" id="stopped-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Информация</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="sub-title">№ Ошибки: <span>256</span></p>
+                <p class="sub-title">Заметка Механика: <span>блок управления дверьми в ремонте, в приямке была вода</span></p>
+
+                <form class="modal-form">
+
+                    <div class="form-group">
+                        <label for="mech-notice">Проделанная работа:</label>
+                        <textarea class="form-control" id="mech-notice" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Cостояние лифта:</label>
+                        <select class="form-control form-control-sm" id="exampleFormControlSelect1" size="1" name="notice">
+                            <option selected="" disabled="">Изменить состояние лифта:</option>
+                            <option value="Запущен">Запущен</option>
+                            <option value="Остановлен">Остановлен</option>
+                            <option value="Текущая заявка">Текущая заявка </option>
+                            <option value="Недоделано">Недоделано </option>
+                        </select>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Работа сделана!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

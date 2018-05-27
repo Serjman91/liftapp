@@ -1,0 +1,169 @@
+{% extends '../layouts/layout.base.twig' %}
+
+{% block title %}Заказ запчастей{% endblock %}
+
+{% block header %}
+    {% include '../includes/header.twig' %}
+{% endblock %}
+
+{% block content %}
+    <div class="content parts-content">
+        <div class="container">
+            <div class="row">
+                <div class="drop-container">
+                    <p>
+                        <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapse-order" aria-expanded="false" aria-controls="collapse-order">
+                            Заказать запчасть
+                        </button>
+                    </p>
+                    <div class="collapse" id="collapse-order">
+                        <div class="card card-body">
+                            <form class="drop-form">
+
+                                <div class="form-group">
+                                    <select class="form-control" size="1" name="address" required="">
+                                        <option value="" selected="" disabled="">Выберите адрес дома:</option>
+                                        <option value="Оптиков 45 к1">Оптиков 45 к1</option>
+                                        <option value="Оптиков 45 к2">Оптиков 45 к2</option>
+                                        <option value="Оптиков 49">Оптиков 49</option>
+                                        <option value="Оптиков 50">Оптиков 50</option>
+                                        <option value="Оптиков 52">Оптиков 52</option>
+                                        <option value="Туристская 11">Туристская 11</option>
+                                        <option value="Туристская 15">Туристская 15</option>
+                                        <option value="Туристская 18">Туристская 18</option>
+                                        <option value="Туристская 28">Туристская 28</option>
+                                        <option value="Лыжная 3">Лыжная 3</option>
+                                        <option value="Лыжная 4">Лыжная 4</option>
+                                        <option value="Лыжная 10">Лыжная 10</option>
+                                        <option value="Мебельная 19">Мебельная 19</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <input class="form-control" type="text" placeholder="Название детали:" name="detailName">
+                                </div>
+
+                                <div class="form-group">
+                                    <input class="form-control" type="text" placeholder="Серийный номен:" name="number">
+                                </div>
+
+                                <div class="form-group">
+                                    <input class="form-control" type="text" placeholder="Примечания" name="notice">
+                                </div>
+                                <div class="form-group">
+
+                                    <select class="form-control" type="text" name="condition" required="">
+                                        <option value="нужно заказать">нужно заказать</option>
+                                        <option value="ожидание">в пути</option>
+                                        <option value="доставлено">доставлено</option>
+                                        <option value="акт подписан">акт подписан</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <button class=" btn color_but_blue" type="submit">
+                                        Отправить
+                                    </button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="tabs main-tabs">
+                    <ul class="nav nav-tabs" id="mainTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="ordered-tab" data-toggle="tab" href="#ordered" role="tab" aria-controls="ordered" aria-selected="true">Заказано</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="needOrder-tab" data-toggle="tab" href="#needOrder" role="tab" aria-controls="needOrder" aria-selected="false">Нужно заказать</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="payed-tab" data-toggle="tab" href="#payed" role="tab" aria-controls="payed" aria-selected="false">Акт подписан</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="ordered" role="tabpanel" aria-labelledby="ordered-tab">
+                            <ul id="notes" class="notes">
+
+                                <li class="col">
+                                    <p class="date">Дата заявки: <span>18-05-2018</span></p>
+                                    <p class="address">Адрес: <span>Невский пр. 17-1</span></p>
+                                    <p class="part">Запчасть: <span>Кнопка</span></p>
+
+                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#stopped-1">Подробнее</button>
+
+                                </li>
+                                <li class="col">
+                                    <p class="date">Дата заявки: <span>18-05-2018</span></p>
+                                    <p class="address">Адрес: <span>Невский пр. 17-1</span></p>
+                                    <p class="part">Запчасть: <span>Кнопка</span></p>
+
+                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#stopped-1">Подробнее</button>
+
+                                </li>
+                                <li class="col">
+                                    <p class="date">Дата заявки: <span>18-05-2018</span></p>
+                                    <p class="address">Адрес: <span>Невский пр. 17-1</span></p>
+                                    <p class="part">Запчасть: <span>Кнопка</span></p>
+
+                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#stopped-1">Подробнее</button>
+
+                                </li>
+                                <li class="col">
+                                    <p class="date">Дата заявки: <span>18-05-2018</span></p>
+                                    <p class="address">Адрес: <span>Невский пр. 17-1</span></p>
+                                    <p class="part">Запчасть: <span>Кнопка</span></p>
+
+                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#stopped-1">Подробнее</button>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <div class="tab-pane fade" id="needOrder" role="tabpanel" aria-labelledby="needOrder-tab">
+                            <ul id="notes" class="notes">
+
+                                <li class="col">
+                                    <p class="date">Дата заявки: <span>18-05-2018</span></p>
+                                    <p class="address">Адрес: <span>Невский пр. 17-1</span></p>
+                                    <p class="part">Запчасть: <span>Кнопка</span></p>
+
+                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#stopped-1">Подробнее</button>
+
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="payed" role="tabpanel" aria-labelledby="payed-tab">
+
+                            <ul id="notes" class="notes">
+
+                                <li class="col">
+                                    <p class="date">Дата заявки: <span>18-05-2018</span></p>
+                                    <p class="address">Адрес: <span>Невский пр. 17-1</span></p>
+                                    <p class="part">Запчасть: <span>Кнопка</span></p>
+
+                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#stopped-1">Подробнее</button>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modals">
+                {% include '../includes/part-modal.twig' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
