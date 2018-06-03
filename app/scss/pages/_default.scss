@@ -16,8 +16,9 @@ body {
   flex-grow: 1;
 }
 
-.scroll-table {
-  overflow-y: auto;
+.scroll-table,
+.table-responsive-sm {
+  overflow-x: auto;
 }
 
 .footer {
@@ -47,6 +48,10 @@ body {
   img {
     max-width: 64px;
     padding-right: 10px;
+
+    @media (max-width: 768px) {
+      max-width: 48px;
+    }
   }
 }
 
@@ -93,11 +98,6 @@ input, select, option, textarea {
 }
 
 .toggle-menu {
-
-  @media (max-width: 1024px) {
-    display: block;
-  }
-
   display: none;
   border-radius: 5px;
   width: 50px;
@@ -109,6 +109,15 @@ input, select, option, textarea {
   top: 30px;
   background: $c-burger-bg;
   outline: none;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    transform: scale(.7);
+    top: 10px;
+  }
 
   span {
     display: block;
@@ -205,10 +214,24 @@ input, select, option, textarea {
 
 .content {
   position: relative;
+}
 
-  //.layer {
-  //  background: rgba(0,0,255,0.5);
-  //  flex-grow: 1;
-  //  min-height: 100%;
-  //}
+h2 {
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.pagination {
+  background-color: rgba($c-pagination-bg,0.7);
+  margin: 5px 0;
+  border-radius: 0;
+}
+
+button {
+  box-shadow: none;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 }

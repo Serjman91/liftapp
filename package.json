@@ -5,7 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
+    "fullcalendar": "^3.9.0",
     "jquery": "^3.3.1",
+    "moment": "^2.22.2",
     "normalize.css": "^8.0.0",
     "touch-cli": "0.0.1"
   },

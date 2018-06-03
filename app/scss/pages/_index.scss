@@ -40,6 +40,10 @@
   .user {
     max-width: 64px;
     width: 100%;
+
+    @media (max-width: 768px) {
+      max-width: 32px;
+    }
   }
 }
 
@@ -88,6 +92,14 @@ button {
 
   tr:nth-child(even) {
     background-color: lighten(rgba(0, 0, 0, 0.45),55%);
+  }
+
+  td {
+    @media (max-width: 768px) {
+      padding: 5px;
+      vertical-align: inherit;
+      min-width: 70px;
+    }
   }
 
   .arrow {
@@ -192,4 +204,36 @@ button {
       font-weight: 600;
     }
   }
+}
+
+#accordion {
+  background: rgba(245,255,255,0.9);
+}
+
+.card {
+  background: none;
+}
+
+.card-header {
+  background: none;
+  font-size: 18px;
+}
+
+.card-body {
+  li {
+    padding: 5px 0;
+    font-size: 16px;
+  }
+}
+
+.hide-note {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.calendar {
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 5px;
+  padding: 5px;
 }

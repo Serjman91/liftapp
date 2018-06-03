@@ -27,6 +27,8 @@ var compressing = false,
         ],
         js: [
             nodeModulesPath + 'jquery/dist/jquery.min.js',
+            nodeModulesPath + 'moment/min/moment-with-locales.js',
+            nodeModulesPath + 'fullcalendar/dist/fullcalendar.js',
             nodeModulesPath + 'tether/dist/js/tether.min.js',
             nodeModulesPath + 'bootstrap/dist/js/bootstrap.min.js',
             nodeModulesPath + 'slideout/dist/slideout.min.js',
